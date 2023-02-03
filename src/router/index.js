@@ -34,10 +34,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/LoginView.vue')
   },
   {
-    path: '/product:afterUser(.*)',
+    path: '/details/:id(.*)',
+    name: 'details',
+    component: () => import(/* webpackChunkName: "about" */ '../components/ProductDetails.vue'),
+    Id: 'value'
+  },
+  {
+    path: '/product/:id(.*)',
     name: 'product',
-    render: (props) => <Product {...props} customProp='someValue' />
+    component: () => import(/* webpackChunkName: "about" */ '../components/ProductComponent.vue'),
+    Id: 'value'
   }
+
+
 ]
 
 const router = createRouter({

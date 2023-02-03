@@ -1,13 +1,13 @@
 <template>
-    <div>
-hello
-    </div>
+    <h1>
+        Kundernes <b>favoritter</b>
+    </h1>
 </template>
 
 <script>
 export default {
-    setup () {
-        
+    setup() {
+
 
         return {}
     }
@@ -15,5 +15,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+    text-align: left;
 
+    span {}
+}
 </style>

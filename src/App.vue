@@ -1,9 +1,12 @@
 <template>
-  <HeaderComponent/>
-  <BreadCrumb/>
+  <keep-alive>
+    <HeaderComponent />
+
+  </keep-alive>
+  <BreadCrumb />
   <div class="Content-Grid">
-    <SideBar class="Side-Bar"/>
-    <router-view class="Router-View"/>
+    <SideBar class="Side-Bar" />
+    <router-view class="Router-View" />
   </div>
 </template>
 
@@ -13,38 +16,40 @@ import BreadCrumb from './components/BreadCrumb.vue';
 import SideBar from './components/SideBar.vue';
 
 export default {
-    setup () {
-        
+  setup() {
 
-        return {}
-    },
-    components: {
+
+    return {}
+  },
+  components: {
     HeaderComponent,
     BreadCrumb,
     SideBar
-}
+  }
 }
 </script>
 
 <style lang="scss">
-
-.Content-Grid{
-  display: grid;  
-  grid-template-columns: repeat(12,1fr);
+.Content-Grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   gap: 1.5vw;
-  .Side-Bar{
+
+  .Side-Bar {
     grid-column-start: 1;
     grid-column-end: 3;
   }
-  .Router-View{
+
+  .Router-View {
     grid-column-start: 3;
     grid-column-end: 13;
   }
 }
 
-body{
+body {
   background-color: #131313;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

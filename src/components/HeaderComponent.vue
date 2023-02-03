@@ -2,11 +2,11 @@
     <header>
         <nav>
             <ul>
-                <router-link to="/">Forside</router-link> 
-            <router-link to="/sales&conditions">Salgs- og handelbetingelser</router-link> 
-            <router-link class="Nav__Login-Button" to="/login">Login</router-link>
+                <router-link to="/">Forside</router-link>
+                <router-link to="/sales&conditions">Salgs- og handelbetingelser</router-link>
+                <router-link class="Nav__Login-Button" to="/login">Login</router-link>
             </ul>
-            
+
         </nav>
         <div class="Search-Bar">
             <address class="Search-Bar__Address">
@@ -18,7 +18,8 @@
             </address>
             <form action="">
                 <input placeholder="Indtast søgeord" type="text">
-                <button type="submit"><font-awesome-icon class="Search-Bar__Button__Arrow" icon="fa-solid fa-arrow-right" /></button>
+                <button type="submit"><font-awesome-icon class="Search-Bar__Button__Arrow"
+                        icon="fa-solid fa-arrow-right" /></button>
             </form>
         </div>
 
@@ -32,8 +33,8 @@
 
 <script>
 export default {
-    setup () {
-        
+    setup() {
+
 
         return {}
     }
@@ -41,11 +42,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.Burger-Menu{
+.Burger-Menu {
     height: 1vw;
     display: none;
-    .Burger-Menu__Button{
+
+    .Burger-Menu__Button {
         width: 3vw;
         height: 3vw;
         background-color: #00F9B6;
@@ -53,7 +54,7 @@ export default {
 }
 
 
-header{
+header {
     display: flex;
     justify-content: center;
     gap: 2vw;
@@ -61,27 +62,29 @@ header{
     margin-bottom: 3vw;
 }
 
-nav{
+nav {
     background-image: url(@/assets/images/header-bg.png);
     background-size: contain;
-    width: 60%;
+    width: 40%;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    ul{
+
+    ul {
         display: flex;
         justify-content: space-between;
         width: 60%;
         margin: 0;
-        a{
+
+        a {
             align-self: center;
-            font-size: 1.3vw;
+            font-size: 1vw;
         }
     }
 
-    .Nav__Login-Button{
+    .Nav__Login-Button {
         background-color: #00F9B6;
         padding: 0vw 0.5vw 0vw 0.5vw;
         border-radius: 3px;
@@ -89,27 +92,28 @@ nav{
 }
 
 
-.Search-Bar{
+.Search-Bar {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .Search-Bar__Address{
+    .Search-Bar__Address {
         position: absolute;
         display: flex;
         justify-content: space-between;
         font-size: 0.9vw;
-        top: 0;
+        top: -0.5vw;
         height: 1vw;
         width: 100%;
-        a{
+
+        a {
             text-decoration: none;
             color: white;
         }
     }
 
-    input{
+    input {
         background-color: #0A1D1C;
         border: none;
         font-size: 1.3vw;
@@ -121,11 +125,13 @@ nav{
         color: #00F9B6;
         border: 1px solid #1F5E5B;
         box-sizing: border-box;
-        &::placeholder{
+
+        &::placeholder {
             color: #00F9B6;
         }
     }
-    button{
+
+    button {
         background-color: #00F9B6;
         border: none;
         font-size: 1.3vw;
@@ -142,16 +148,14 @@ nav{
 }
 
 @media only screen and (max-width: 600px) {
-  header {
-    display: none;
-  }
-  .Burger-Menu{
-    
-    display: flex;
-    justify-content: flex-end;
-  }
+    header {
+        display: none;
+    }
+
+    .Burger-Menu {
+
+        display: flex;
+        justify-content: flex-end;
+    }
 }
-
-
-
 </style>

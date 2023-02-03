@@ -6,8 +6,8 @@
 
 <script>
 export default {
-    setup () {
-        
+    setup() {
+
 
         return {}
     }
@@ -15,9 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-img{
+img {
     width: 100%;
 }
-
 </style>
